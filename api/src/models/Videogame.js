@@ -22,7 +22,7 @@ module.exports = (sequelize) => {
       type: DataTypes.INTEGER,
     },
     platforms: {
-      type: DataTypes.JSON,
+      type: DataTypes.STRING,
     },
     released:{
       type:DataTypes.DATEONLY,
