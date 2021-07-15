@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Play&display=swap');
+
+.card {
+  width: 290px;
+  height: 380px;
+  border: none;
+  overflow: hidden;
+  margin-left: 15px;
+  margin-right: 20px;
+  margin-top: 15px;
+  background: #1713eb;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #0c2ef0, #4608ee, #2011f1);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.image {
+  height: 60%;
+}
+
+.image img {
+  height: 100%;
+  width: 100%;
+}
+
+.detail h3 {
+  margin-top: 8px;
+  color: whitesmoke;
+}
+
+.detail p {
+  margin-top: 4px;
+  color: whitesmoke;
+  font-family: 'Play', sans-serif;
+  font-size: small;
+}
+
+.detail button {
+  align-items: center;
+  margin-left: 80px;
+  border-radius: 9px;
+  background:#160f11;
+  color: whitesmoke;
+  border: 2px solid;
+  padding: 7px 13px;
+  box-shadow: 0 0 8px #fff;
+}
+
+.detail button:hover {
+  align-items: center;
+  cursor: pointer;
+  text-shadow: 0 0 5px #fff;
+}
+
+.detail {
+  color: whitesmoke;
+}
+
+.detail {
+  height: 40%;
+}
+
+
+ 

@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+
+
+.container_home {
+  text-align: center;
+  background: linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%);
+}
+.header {
+  max-width: 100%;
+  background: #040505;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  padding: 8px;
+  height: 85px;
+}
+.image1{
+  width: 60px;
+  height: 60px;
+  margin-left:-250px
+}
+.img {
+  /* width: 300px; */
+  width: 60px;
+  height: 60px;
+  border-radius: 20%;
+  padding: 4px;
+}
+
+.searchbar {
+  width: 300px;
+}
+
+.navbar {
+  width: 500px;
+}
+.contenido {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Courier New", Courier, monospace;
+  color: aliceblue;
+  font-weight: 600;
+}
+.navbar .contenido a {
+  text-decoration: none;
+  color: aliceblue;
+}
+.navbar .contenido a:hover {
+  color: black;
+}
+
+button {
+ 
+  color:white;
+  position: relative;
+  display: flex;
+  width: 10em;
+  height: 2.5rem;
+  line-height: 3;
+  background: #2c3e50;
+  overflow: hidden;
+  border-radius: 0.25em;
+  
+}
+/* Remove IE arrow */
+.button_game::-ms-expand {
+  display: none;
+}
+
+.button_game {
+  color:white;
+  position: relative;
+  display: flex;
+  width: 10em;
+  height: 2.5rem;
+  line-height: 3;
+  background: #2c3e50;
+  overflow: hidden;
+  border-radius: 0.25em;
+}
+
+/* Transition */
+.addGame:hover {
+  color: #f39c12;
+}
+
+.main-title {
+  font-family: "Bangers", cursive;
+}
