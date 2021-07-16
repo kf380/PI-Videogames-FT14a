@@ -21,8 +21,13 @@ module.exports = (sequelize) => {
     rating: {
       type: DataTypes.INTEGER,
     },
+    image: {
+      type: DataTypes.STRING,
+      defaultValue: "https://i.ytimg.com/vi/UJHvFQYIpeY/maxresdefault.jpg"
+    },
     platforms: {
       type: DataTypes.STRING,
+      
     },
     released:{
       type:DataTypes.DATEONLY,

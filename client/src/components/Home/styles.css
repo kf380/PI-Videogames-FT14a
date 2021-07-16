@@ -3,11 +3,11 @@
 
 .container_home {
   text-align: center;
-  background: linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%);
+  background:  #040505;
 }
 .header {
   max-width: 100%;
-  background: #040505;
+  background: #782b80;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -40,7 +40,7 @@
   align-items: center;
   justify-content: space-between;
   font-family: "Courier New", Courier, monospace;
-  color: aliceblue;
+  color: rgb(237, 244, 250);
   font-weight: 600;
 }
 .navbar .contenido a {
@@ -59,7 +59,7 @@ button {
   width: 10em;
   height: 2.5rem;
   line-height: 3;
-  background: #2c3e50;
+  background: #030405;
   overflow: hidden;
   border-radius: 0.25em;
   
@@ -76,7 +76,7 @@ button {
   width: 10em;
   height: 2.5rem;
   line-height: 3;
-  background: #2c3e50;
+  background: #050607;
   overflow: hidden;
   border-radius: 0.25em;
 }

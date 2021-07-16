@@ -25,14 +25,14 @@
   }
   
   .navPag .pagination li button {
-    background: #0e0d16;
-    border: 4px solid rgb(7, 11, 240);
+    background: #07060c;
+    border: 4px solid rgb(77, 22, 122);
     border-radius: 9px;
     height: 65%;
     width: 50%;
     outline: none;
     color: #fefdff;
-    margin-left: 15px;
+    margin-left: 20px;
     box-shadow: rgb(0 0 0 / 15%) 1.95px 1.95px 2.6px;
   }
   
@@ -43,5 +43,5 @@
   
   .navPag .pagination li button:focus {
     color: #080404;
-    background-color: #240dee;
+    background-color: #5f2177;
   }

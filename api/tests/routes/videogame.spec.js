@@ -7,6 +7,11 @@ const { Videogame, conn } = require('../../src/db.js');
 const agent = session(app);
 const videogame = {
   name: 'Super Mario Bros',
+  description: "prueba",
+  platforms: "pc, tablet",
+  released: "12/08/2021",
+  rating: 4,
+  genres: ["Action", "Shooter"],
 };
 
 describe('Videogame routes', () => {
@@ -21,4 +26,19 @@ describe('Videogame routes', () => {
       agent.get('/videogames').expect(200)
     );
   });
+  describe('GET /videogames?name=...', () => {
+    it('should get a 15 results', () =>
+      agent.get('/videogames?name=spiderman')
+        .expect(200)
+        .expect('Content-Type', /json/)
+        .expect(function (res) {
+          expect(res.body).length(15);
+        })
+    );
+    it('should get 404 status if name does not exist', () =>
+      agent.get('/videogames?name=anybadname')
+        .expect(404)
+    );
+  });
 });
+

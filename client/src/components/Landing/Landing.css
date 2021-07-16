@@ -1,26 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Bangers&family=Play&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;1,200&display=swap');
 .container {
   width: 80vw;
   height: 80vh;
   background: linear-gradient(top, #fff, white);
-  background: linear-gradient(110deg, #cccac4 60%, #ffed4b 60%);
+  background: linear-gradient(110deg, #892ba5 60%, #531d4c 60%);
   text-align: center;
   
   
 }
 
 .button {
-  margin-top: 50px;
-  margin-left: 180px;
+  font-family: "Source", sans-serif;
+  font-size: medium;
+  direction:ltr;
+  line-height: 30px;
+  font-weight: 10px;
+  margin-top: 40px;
+  margin-left: 160px;
   border-radius: 20px;
   background: #a70321;
   text-decoration-color: #ffed4b;
   border: 0px solid;
   padding: 7px 15px;
   box-shadow: 0 0 8px #fff;
-  font-family: "Play", sans-serif;
-  font-weight: 600;
-  font-size: xx-large;
+
+  
 }
 
 .init_title {
@@ -28,5 +33,5 @@
   font-size: 40px;
   margin-top: -800px;
   margin-left: -450px;
-  color: rgb(250, 250, 241)
+  color: rgb(223, 223, 13)
 }

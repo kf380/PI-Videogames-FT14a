@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
-import videoGame from "../../image/video-games.png";
+import pes from "../../image/pes.jpg";
 import games from "../../image/games.png";
 
 import { useSelector, useDispatch } from "react-redux";
@@ -43,7 +43,7 @@ const CardDetails = ({ id }) => {
             <div className="">
               <figure className="image_div">
                 <img
-                  src={gamesId.image ? gamesId.image : videoGame}
+                  src={gamesId.image ? gamesId.image : pes}
                   alt="no found"
                 />
               </figure>

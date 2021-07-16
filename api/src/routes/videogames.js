@@ -1,10 +1,8 @@
 const { Router } = require('express');
 const { Videogame, Genres} = require('../db');
 const axios = require('axios').default;
-const { API_KEY } = process.env;
+const { YOUR_API_KEY}  = process.env;
 const router = Router();
-const fetch = require('node-fetch');
-const{Op}=require('sequelize')
 
 
 router.get('/', async (req,res,next)=>{
@@ -15,6 +13,7 @@ router.get('/', async (req,res,next)=>{
             id: e.id,
             name: e.name,
             description: e.description,
+            image: e.background_image,
             rating: e.rating,
             platforms: e.platforms,
             released: e.released,
@@ -26,7 +25,7 @@ router.get('/', async (req,res,next)=>{
         let pagesApi = [];
         for (let i = 1; i <= 5; i++) {
           await axios
-            .get(`https://api.rawg.io/api/games?key=83192c4258a04f328952e2dd57afc040&page=${i}`)
+            .get(`https://api.rawg.io/api/games?key=${YOUR_API_KEY}&page=${i}`)
             .then((g) => {
               
               gamesApi = g.data.results.map((game) => {
@@ -51,20 +50,24 @@ router.get('/', async (req,res,next)=>{
       }
     });
 
+    
 router.get('/search', async (req,res,next)=>{
+  
     const { name } = req.query;
     const createdGames = await Videogame.findAll({include: {model: Genres}})
     for (let i = 1; i <= 5; i++) {
-        const arr= await axios.get(`https://api.rawg.io/api/games?search=${name}&key=83192c4258a04f328952e2dd57afc040&page=${i}`)
+        const arr= await axios.get(`https://api.rawg.io/api/games?search=${name}&key=${YOUR_API_KEY}&page=${i}`)
      try {
     const game = arr.data.results.map((x)=>{
             return {
-                id: x.id,
-                name: x.name,
-                image: x.background_image,
-                rating: x.rating,
-                released: x.released,
-                
+              id: x.id,
+              name: x.name,
+              image: x.background_image,
+              rating: x.rating,
+              released: x.released,
+              platforms:x.platforms, 
+              genres: x.genres.map((g) => g.name).join(", "),
+              source: "Api",
                 
               }
           })  
@@ -76,15 +79,18 @@ router.get('/search', async (req,res,next)=>{
             image: m.background_image,
             rating: m.rating,
             released: m.released,
+            platforms:m.platforms,
+            genres: m.genres.map((g) => g.name).join(", "),
+            source: "BD",
            }
           })           
  
            const joinR = xgames.concat(game);
            // console.log(joinR)
       
-          if(name === undefined)  return res.status(200).send(joinR)
+          if(name)  return res.status(200).send(joinR)
             
-          else if (name && name.length>0 ){
+          else if (!name){
                  
               const xname= joinR.filter(x=> x.name.toLowerCase().includes(name.toLowerCase()))
     
@@ -95,4 +101,15 @@ router.get('/search', async (req,res,next)=>{
     next(error)
   }
  }})
+
+
+
+
+
+
+
+
+
+
+ 
 module.exports = router;
