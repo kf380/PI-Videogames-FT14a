@@ -5,7 +5,7 @@ const Loader = () => {
   return (
     <div className="loader">
         <div className="loading-text">
-            <span> Espera... Estamos buscando el mejor juego para vos</span>
+            <span> Aguarda un instante... Estamos buscando los mejores juegos para vos</span>
         </div>
         <div className="lds-roller"><div></div><div></div><div></div></div>
     </div>

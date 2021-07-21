@@ -3,7 +3,7 @@ const { Videogame, Genres} = require('../db');
 const axios = require('axios').default;
 const { YOUR_API_KEY}  = process.env;
 const router = Router();
-
+const {Op}= require('sequelize')
 
 router.get('/', async (req,res,next)=>{
     try {
@@ -54,7 +54,11 @@ router.get('/', async (req,res,next)=>{
 router.get('/search', async (req,res,next)=>{
   
     const { name } = req.query;
-    const createdGames = await Videogame.findAll({include: {model: Genres}})
+    const createdGames = await Videogame.findAll({
+      where:{ 
+        name: {
+          [Op.iLike]: `%${name}`}},
+      include: {model: Genres}})
     for (let i = 1; i <= 5; i++) {
         const arr= await axios.get(`https://api.rawg.io/api/games?search=${name}&key=${YOUR_API_KEY}&page=${i}`)
      try {

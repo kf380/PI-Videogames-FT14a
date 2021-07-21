@@ -1,3 +1,4 @@
+
 .search {
     width: 100%;
     position: relative;
@@ -6,29 +7,30 @@
   
   .searchTerm {
     width: 100%;
-    border: 3px solid #2c3e50;
+    border: 3px solid #0c0d0e;
     border-right: none;
     padding: 5px;
     height: 40px;
     border-radius: 5px 0 0 5px;
     outline: none;
-    color: #9DBFAF;
+    color: #080f0c;
   }
   
   .searchTerm:focus{
-    color: #15100f;
+    color: #eb300b;
+    
   }
   
   .searchButton {
     width: 40px;
     height: 40px;
-    border: 1px solid #15100f;
-    background: #2c3e50;
+    border: 1px solid #130c0b;
+    background: #d83925;
     text-align: center;
     color: #fff;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
-    font-size: 20px;
+   border-radius: 0.5rem;
+   outline: none;
+    color: #080f0c;
   }
   
   /*Resize the wrap to see the search bar change!*/
@@ -38,4 +40,8 @@
     top: 50%;
     left: 38%;
     transform: translate(-50%, -50%);
+  }
+
+  .busquedaNombre{
+    font-size: 34px !important;
   }

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Play&display=swap');
 /* Reset Select */
 select {
   -webkit-appearance: none;
@@ -21,7 +22,7 @@ select::-ms-expand {
   width: 10em;
   height: 2.5rem;
   line-height: 3;
-  background: #080b0e;
+  background: #06080a;
   overflow: hidden;
   border-radius: 0.25em;
 }
@@ -38,7 +39,7 @@ select {
   top: 0;
   right: 0;
   padding: 0 1em;
-  background: #02434e;
+  background: #04d1f5;
   cursor: pointer;
   pointer-events: none;
   -webkit-transition: 0.25s all ease;

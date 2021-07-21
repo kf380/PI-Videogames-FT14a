@@ -158,9 +158,12 @@ fieldset {
   font-size: 15px; */
   border-radius: 9px;
   background: #a70321;
+  text-indent: 150px;
+  line-height: 20px;
   color: whitesmoke;
   border: 2px solid;
   padding: 7px 13px;
+  padding-left: 10px;
   box-shadow: 0 0 8px #fff;
 }
 

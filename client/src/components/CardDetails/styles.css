@@ -10,7 +10,7 @@
 
 .header_details {
   max-width: 100%;
-  background: #ce0a0a;
+  background: #782b80;
   display: flex;
   align-items: center;
   /* justify-content: space-around; */
@@ -20,5 +20,10 @@
 }
 
 .image_div img {
-  width: 100%;
+  width: 25%
 }
+
+.backhome{
+  font-size: 50px;
+}
+

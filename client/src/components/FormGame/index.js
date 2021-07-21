@@ -5,7 +5,8 @@ import { getGenresDb, postNewGame } from "../../redux/actions";
 import "./styles.css";
 import swal from "sweetalert";
 // import { useForm } from "react-hook-form";
-import games from "../../image/games.png";
+import {FcUndo} from "react-icons/fc"
+
 
 const FormGame = () => {
  
@@ -72,7 +73,7 @@ const FormGame = () => {
             history.goBack();
           }}
         >
-          <img src={games} alt="logo" />
+          <FcUndo className="backhome" />
         </button>
       </header>
       <div className="container_form" >
@@ -137,7 +138,7 @@ const FormGame = () => {
             ></input>
           </fieldset>
           <fieldset className="select_field">
-            <label>Elegi un genero para tu juego</label>
+            <label>Elegi el/los genero/s para tu juego</label>
             <span className="select_genres">
               {genresRedux.map((g) => (
                 <div key={g.id}>

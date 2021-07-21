@@ -9,8 +9,7 @@ export default function Landing() {
       <img src={landing} alt="portada"/>
       <h2 className="init_title">Bienvenidos al mejor sitio de videojuegos!</h2>
       <Link to="/home">
-        <button className="button" type="submit"> 
-        Ingresa </button>
+        <button className="button" type="submit">Ingresar</button>
       </Link>
   </div>
       

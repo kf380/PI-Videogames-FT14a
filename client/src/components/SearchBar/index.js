@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { searchGamesQuery } from "../../redux/actions";
 import { useDispatch } from "react-redux";
 import "./styles.css";
+import { FcSearch } from "react-icons/fc";
+
 
 const SearchBar = () => {
   const [search, setSearch] = useState("");
@@ -25,6 +27,7 @@ const SearchBar = () => {
         ></input>
         <button className="searchButton" name="name" type="submit">
           <i className="fa fa-search"></i>
+          <FcSearch className="busquedaNombre" />
         </button>
       </div>
     </form>

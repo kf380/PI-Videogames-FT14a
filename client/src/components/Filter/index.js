@@ -26,7 +26,7 @@ const Filter = () => {
   return (
     <div className="filter">
       <select onChange={handleFilter}>
-        <option defaultValue>Filtrar por </option>
+        <option defaultValue>Todos </option>
         <option value="Api">API</option>
         <option value="Created">Creado</option>
         {genres.map((g, id) => (

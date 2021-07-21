@@ -11,27 +11,32 @@
 }
 
 .button {
-  font-family: "Source", sans-serif;
-  font-size: medium;
+  font-family: "Bangers", sans-serif;
+  font-size: 20px;
+  text-indent: 20px;
   direction:ltr;
-  line-height: 30px;
-  font-weight: 10px;
-  margin-top: 40px;
-  margin-left: 160px;
+  line-height: 25px;
+  font-weight: 400px;
+  margin-top: 700px;
+  margin-left: 800px;
   border-radius: 20px;
   background: #a70321;
-  text-decoration-color: #ffed4b;
-  border: 0px solid;
+  text-decoration-color: #dddcd4;
+  border: 2.5px solid;
   padding: 7px 15px;
-  box-shadow: 0 0 8px #fff;
+  padding-top: 6px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 80px;
+  box-shadow: 0 0 8px rgb(12, 9, 9);
 
   
 }
 
 .init_title {
   font-family: "Bangers", cursive;
-  font-size: 40px;
-  margin-top: -800px;
-  margin-left: -450px;
+  font-size: 60px;
+  margin-top: -1050px;
+  margin-left: 280px;
   color: rgb(223, 223, 13)
 }

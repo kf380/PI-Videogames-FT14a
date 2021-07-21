@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import pes from "../../image/pes.jpg";
-import games from "../../image/games.png";
+import {FcUndo} from "react-icons/fc"
 
 import { useSelector, useDispatch } from "react-redux";
 import Loader from "../Loader";
@@ -35,7 +35,7 @@ const CardDetails = ({ id }) => {
                 history.goBack();
               }}
             >
-              <img src={games} alt="logo" />
+              <FcUndo className="backhome" />
             </button>
           </header>
           <div className="full">

@@ -5,7 +5,9 @@ import { useSelector, useDispatch } from "react-redux";
 import { getAllGames } from "../../redux/actions";
 
 import "./styles.css";
+import games1 from "../../image/games1.png";
 
+import {FcUndo} from "react-icons/fc"
 
 
 import SearchBar from "../SearchBar";
@@ -48,11 +50,14 @@ const Home = () => {
   
 
   return (
+
     <div value="fondo" className="fondo">
       <header className="header">
-        <button className="img" onClick={handleClick}>
+        <button className="img" onClick={handleClick} >
+      <FcUndo className="backhome" />
         </button>
-           
+        <img className="image1" src={games1} alt="logo"/>
+        <img className="image2" src={games1} alt="logo"/>
         <div className="searchbar">
           <SearchBar />
         </div>
@@ -80,7 +85,11 @@ const Home = () => {
         pagination={pagination}
         key={"#"}
       />
+
     </div>
-  );
+  
+    
+ 
+  )
 };
 export default Home;
